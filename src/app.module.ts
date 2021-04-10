@@ -5,7 +5,7 @@ import { MyLogger } from './middleware/logger.middleware'
 import { ConfigModule } from '@nestjs/config';
 import { ConfigService } from './shared/services/configService';
 import { TypeOrmModule } from '@nestjs/typeorm';
-
+import { TeamModule } from './modules/team/team.module';
 
 
 @Module({
@@ -15,10 +15,11 @@ import { TypeOrmModule } from '@nestjs/typeorm';
         envFilePath: '.env' // gestion du dotenv via le ConfigService
       }
     ),
-    TypeOrmModule.forRoot(ConfigService.getTypeOrmConfig())
+    TypeOrmModule.forRoot(ConfigService.getTypeOrmConfig()),
+    TeamModule,
   ],
   controllers: [
-    AppController
+    AppController,
   ],
   providers: [
     AppService,
