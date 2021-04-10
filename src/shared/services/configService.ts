@@ -1,5 +1,8 @@
 import { Injectable } from "@nestjs/common";
 import { TypeOrmModuleOptions } from "@nestjs/typeorm";
+import { Employee } from "../entities/employee.entity";
+import { Profile } from "../entities/profile.entity";
+import { Team } from "../entities/team.entity";
 import { apiSuccess } from "../interfaces/apiSuccess";
 
 require('dotenv').config();
@@ -23,7 +26,7 @@ export class ConfigService{
             username: process.env.DB_USER,
             password: process.env.DB_PASSWORD,
             database: process.env.DB_NAME,
-            entities: [],
+            entities: [Team, Profile, Employee],
             synchronize: true,
           } as TypeOrmModuleOptions
     }
