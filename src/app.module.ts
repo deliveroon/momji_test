@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { MyLogger } from './middleware/logger.middleware'
 import { ConfigModule } from '@nestjs/config';
 import { ConfigService } from './shared/services/configService';
+import { TypeOrmModule } from '@nestjs/typeorm';
 
 
 
@@ -13,7 +14,8 @@ import { ConfigService } from './shared/services/configService';
       {
         envFilePath: '.env' // gestion du dotenv via le ConfigService
       }
-    )
+    ),
+    TypeOrmModule.forRoot(ConfigService.getTypeOrmConfig())
   ],
   controllers: [
     AppController
