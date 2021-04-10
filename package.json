@@ -1,8 +1,8 @@
 {
   "name": "momji-test-api",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "API TEST MOMJI",
+  "author": "Cherif Ben Dahmane",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
