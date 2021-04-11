@@ -10,6 +10,8 @@ require('dotenv').config();
 @Injectable()
 export class ConfigService{
 
+
+
     public getApiSuccess (): apiSuccess{
         return {
             version: process.env.API_VERSION,
@@ -29,5 +31,13 @@ export class ConfigService{
             entities: [Team, Profile, Employee],
             synchronize: true,
           } as TypeOrmModuleOptions
+    }
+
+    public static getAppPort(): number{
+        return + process.env.APP_PORT;
+    }
+
+    public static getAppHost(): string{
+        return process.env.APP_HOST;
     }
 }
