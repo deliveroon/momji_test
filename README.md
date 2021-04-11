@@ -6,29 +6,29 @@
 
 ## Endpoints:
 
-[GET] /
+#### [GET] /
 
 ### Team
 
-[POST] /team
-[GET] /team/$id
-[PUT] /team/$id
-[DELETE] /team/$id
+#### [POST] /team
+#### [GET] /team/$id
+#### [PUT] /team/$id
+#### [DELETE] /team/$id
 
 ### Employee
 
-[POST] /employee
-[GET] /employee/$id
-[PUT] /employee/$id
-[DELETE] /employee/$id
+#### [POST] /employee
+#### [GET] /employee/$id
+#### [PUT] /employee/$id
+#### DELETE] /employee/$id
 
 ## Schema:
 
-![architecture!](/assets/schema.png "architecture")
+![schema!](/assets/schema.png "schema")
 
 
-## Digramme des classes:
+## Digramme fonctionnel:
 
-![architecture!](hcztps://miro.medium.com/max/879/1*zeOv4blDpgcoqTLUvfmbXQ.png "architecture")
+![diagramme!](/assets/diagramme.png "diagramme")
 
 
