@@ -31,7 +31,7 @@
 #### [POST] /employee
 #### [GET] /employee/$id
 #### [PUT] /employee/$id
-#### DELETE] /employee/$id
+#### [DELETE] /employee/$id
 
 ## Schema:
 
