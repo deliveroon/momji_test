@@ -23,12 +23,14 @@ export class TeamService {
   }
 
   async getAllTeams(): Promise<Team[]>{
-      const teams = await this.manager.find(Team)
+      const teams = await this.manager.find(Team);
+      if(!teams) throw new HttpException('not found', HttpStatus.NOT_FOUND);
       return teams;
   }
 
   async getOneTeam(id: string): Promise<Team>{
     const team = await this.manager.findOne(Team, id)
+    if(!team) throw new HttpException('not found', HttpStatus.NOT_FOUND);
     return team;
   }
 

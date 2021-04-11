@@ -6,6 +6,7 @@ import { ConfigModule } from '@nestjs/config';
 import { ConfigService } from './shared/services/configService';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { TeamModule } from './modules/team/team.module';
+import { EmployeeModule } from './modules/employee/employee.module';
 
 
 @Module({
@@ -17,6 +18,7 @@ import { TeamModule } from './modules/team/team.module';
     ),
     TypeOrmModule.forRoot(ConfigService.getTypeOrmConfig()),
     TeamModule,
+    EmployeeModule,
   ],
   controllers: [
     AppController,

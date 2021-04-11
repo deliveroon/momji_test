@@ -1,4 +1,4 @@
-import {Entity, Column, PrimaryColumn, CreateDateColumn, UpdateDateColumn, Timestamp, OneToOne, JoinColumn} from "typeorm";
+import {Entity, Column, PrimaryColumn, CreateDateColumn, UpdateDateColumn, Timestamp, OneToOne, JoinColumn, ManyToOne} from "typeorm";
 import { Profile } from "./profile.entity";
 import { Team } from "./team.entity";
 
@@ -20,11 +20,11 @@ export class Employee {
 
     @Column({type: "timestamp"})
     registered: Timestamp;
-
+    
     @Column()
     isActive: boolean;
 
-    @OneToOne(() => Team)
+    @ManyToOne(() => Team)
     @JoinColumn()
     team: Team;
 
