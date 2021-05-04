@@ -20,11 +20,12 @@ export class AppController {
       "password": "zS56fSiT9",
       "keepAlive": true,
       }
-    const reponse = await fetch('http://tokyo.speaking-beta.com/api/v2/auth/login', {
+    const response = await fetch('http://tokyo.speaking-beta.com/api/v2/auth/login', {
             method: 'post',
             body:    JSON.stringify(body),
             headers: { 'Content-Type': 'application/json' },
-    }).json();
-    return reponse;
+    });
+    const data = response.json();
+    return data;
   }
 }
