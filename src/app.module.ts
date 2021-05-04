@@ -16,7 +16,7 @@ import { EmployeeModule } from './modules/employee/employee.module';
         envFilePath: '.env' // gestion du dotenv via le ConfigService
       }
     ),
-    TypeOrmModule.forRoot(ConfigService.getTypeOrmConfig()),
+    //TypeOrmModule.forRoot(ConfigService.getTypeOrmConfig()),
     TeamModule,
     EmployeeModule,
   ],
