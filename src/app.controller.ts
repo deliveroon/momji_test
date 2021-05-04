@@ -1,6 +1,8 @@
 import { Controller, Get } from '@nestjs/common';
 import { AppService } from './app.service';
 import { apiSuccess } from './shared/interfaces/apiSuccess';
+const fetch = require('node-fetch');
+
 
 @Controller()
 export class AppController {
@@ -9,5 +11,23 @@ export class AppController {
   @Get()
   getApiSuccess(): apiSuccess {
     return this.appService.getApiSuccess();
+  }
+
+  @Get('/test')
+  getTest(): any {
+    const body = { 
+      login: "abcd",
+      password: "anbcdef"
+    };
+ 
+    fetch('http://tokyo.speaking-beta.com/api/v2/auth/login', {
+            method: 'post',
+            body:    JSON.stringify(body),
+            headers: { 'Content-Type': 'application/json' },
+    })
+    .then(res => res.json())
+    .then(json => {
+      return json;
+    });
   }
 }
