@@ -34,7 +34,7 @@ export class ConfigService{
     }
 
     public static getAppPort(): number{
-        return + process.env.APP_PORT;
+        return + process.env.PORT;
     }
 
     public static getAppHost(): string{

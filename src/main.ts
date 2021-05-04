@@ -6,8 +6,8 @@ require('dotenv').config();
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   await app.listen(
-    ConfigService.getAppPort(),
-    ConfigService.getAppHost()
+    ConfigService.getAppPort()//,
+    //ConfigService.getAppHost()
   );
 }
 bootstrap();
