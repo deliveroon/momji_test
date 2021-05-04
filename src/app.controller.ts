@@ -13,7 +13,7 @@ export class AppController {
     return this.appService.getApiSuccess();
   }
 
-  @Get('/testPOST ')
+  @Get('/testPOST')
   getTest(): any {
     const body = {
       "login": "test@momji.fr",
