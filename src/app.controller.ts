@@ -14,18 +14,17 @@ export class AppController {
   }
 
   @Get('/testPOST')
-  getTest(): any {
+  async getTest(): Promise<any> {
     const body = {
       "login": "test@momji.fr",
       "password": "zS56fSiT9",
       "keepAlive": true,
       }
-    fetch('http://tokyo.speaking-beta.com/api/v2/auth/login', {
+    const reponse = await fetch('http://tokyo.speaking-beta.com/api/v2/auth/login', {
             method: 'post',
             body:    JSON.stringify(body),
             headers: { 'Content-Type': 'application/json' },
-    })
-    .then(res => res.json())
-    .then(json => {console.log(json)})
+    }).json();
+    return reponse;
   }
 }
