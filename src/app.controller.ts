@@ -20,7 +20,6 @@ export class AppController {
       "password": "zS56fSiT9",
       "keepAlive": true,
       }
- 
     fetch('http://tokyo.speaking-beta.com/api/v2/auth/login', {
             method: 'post',
             body:    JSON.stringify(body),
