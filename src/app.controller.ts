@@ -25,9 +25,7 @@ export class AppController {
             body:    JSON.stringify(body),
             headers: { 'Content-Type': 'application/json' },
     })
-    .then(res => {
-      console.log(res.json)
-      return res.json();
-    })
+    .then(res => res.json())
+    .then(json => {console.log(json)})
   }
 }
