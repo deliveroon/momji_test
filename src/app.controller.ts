@@ -13,12 +13,13 @@ export class AppController {
     return this.appService.getApiSuccess();
   }
 
-  @Get('/test')
+  @Get('/testPOST ')
   getTest(): any {
-    const body = { 
-      login: "abcd",
-      password: "anbcdef"
-    };
+    const body = {
+      "login": "test@momji.fr",
+      "password": "zS56fSiT9",
+      "keepAlive": true,
+      }
  
     fetch('http://tokyo.speaking-beta.com/api/v2/auth/login', {
             method: 'post',
