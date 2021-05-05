@@ -16,7 +16,8 @@ export class ConfigService{
         return {
             version: process.env.API_VERSION,
             statusCode: 200,
-            message: "Welcom to Mômji test API! =)"
+            message: "Welcom to Mômji test API! =)",
+            port: +process.env.PORT
           } as apiSuccess;
     }
 
