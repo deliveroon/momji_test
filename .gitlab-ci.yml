@@ -11,6 +11,9 @@ stages:
 
 staging:
     stage: staging
+    environment:
+        name: staging
+        url: https://aqueous-everglades-01943.herokuapp.com/
     when: manual
     image: ruby:latest
     script:
@@ -20,6 +23,9 @@ staging:
 
 production:
     stage: production
+    environment:
+        name: staging
+        url: https://tranquil-plains-83917.herokuapp.com/
     when: manual
     image: ruby:latest
     script:
