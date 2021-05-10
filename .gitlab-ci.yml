@@ -10,7 +10,6 @@ stages:
     - production
 
 staging:
-    type: deploy
     stage: staging
     when: manual
     image: ruby:latest
@@ -20,7 +19,6 @@ staging:
         - staging
 
 production:
-    type: deploy
     stage: production
     when: manual
     image: ruby:latest
